@@ -5,4 +5,5 @@ def multiple_returns(sentence):
         first = None
     else:
         first = sentence[0]
-    return (length, first)
+    tuple_return = (length, first)
+    return tuple_return
