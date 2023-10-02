@@ -13,4 +13,4 @@ def add_tuple(tuple_a=(), tuple_b=()):
     
     new_tuple = (new_a, new_b)
 
-    return (new_tuple)
+    return new_tuple
