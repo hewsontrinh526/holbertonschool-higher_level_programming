@@ -8,13 +8,13 @@ def roman_to_int(roman_string):
         return 0
 
     num = 0
+    prev = 0
 
-    for i in range(len(roman_string)):
-        if i == len(roman_string) - 1:
-            num = num + roman_dict.get(roman_string[i])
-        elif rom_dict.get(roman_string[i]) < rom_dict.get(roman_string[i + 1]):
-            num = num - roman_dict.get(roman_string[i])
+    for i in roman_string:
+        val = rom_dict[i]
+        if val > prev:
+            num = num + val - 2 * prev
         else:
-            num = num + roman_dict.get(roman_string[i])
-
+            num = num + val
+        prev = val
     return num
