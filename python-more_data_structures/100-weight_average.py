@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 def weight_average(my_list=[]):
-    average = 0
-    product = 0
+    total_average = 0
+    total_product = 0
     for item in my_list:
         value, weight = item
-        product = product + (value * weight)
-        average = average + weight
-    if average == 0:
+        total_product = total_product + (value * weight)
+        total_average = total_average + weight
+    if total_average == 0:
         return 0
     else:
-        return product / average
+        return total_product / total_average
