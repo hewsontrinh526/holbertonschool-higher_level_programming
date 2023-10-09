@@ -24,7 +24,8 @@ class Square:
 
         Arguments:
         size (int): The size of the square, set to 0 by default
-        position (int): The position of the square must be a tuple of 2 positive integers
+        position (int): The position of the square
+        must be a tuple of 2 positive integers
         """
         self.__size = size
         self.__position = position
@@ -54,7 +55,7 @@ class Square:
         Retrieves itself
         """
         return self.__position
-    
+
     @position.setter
     def position(self, value):
         """
