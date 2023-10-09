@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-"""A class Square that defines a square by a private instance attribute of size"""
+"""
+A class Square that defines a square
+by a private instance attribute of size
+"""
 
 
 class Square:
     """
     Contains a private instance attribute of size with conditions
-    
+
     Attributes:
         size (int): size of the square
     Methods:
