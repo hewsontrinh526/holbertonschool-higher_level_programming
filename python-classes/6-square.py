@@ -27,8 +27,8 @@ class Square:
         position (int): The position of the square
         must be a tuple of 2 positive integers
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
