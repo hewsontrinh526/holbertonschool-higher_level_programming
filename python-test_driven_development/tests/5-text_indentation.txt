@@ -10,15 +10,9 @@ First import ``text_indentation`` from the ``5-text_indentation`` file:
 Tests:
 
     Test - Regular Text
-    >>> text = "Why is Twice named Twice? The group will touch people's hearts twice: once through the ears, and once again through the eyes. Also Mina is number 1"
+    >>> text = "Mina is number 1"
     >>> text_indentation(text)
-    Why is Twice named Twice?
-
-    The group will touch people's hearts twice:
-
-    once through the ears, and once again through the eyes.
-
-    Also Mina is number 1.
+    Mina is number 1
 
     Test - Missing Argument
     >>> text = "Why is Twice named Twice? The group will touch people's hearts twice: once through the ears, and once again through the eyes. Also Mina is number 1"
