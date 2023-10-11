@@ -1,0 +1,28 @@
+The ``text_indentation`` module
+==========================
+
+Using ``text_indentation``
+---------------------
+
+First import ``text_indentation`` from the ``5-text_indentation`` file:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Tests:
+
+    Test - Regular Text
+    >>> text = "Why is Twice named Twice? The group will touch people's hearts twice: once through the ears, and once again through the eyes. Also Mina is number 1"
+    >>> text_indentation(text)
+    Why is Twice named Twice?
+
+    The group will touch people's hearts twice:
+
+    once through the ears, and once again through the eyes.
+
+    Also Mina is number 1.
+
+    Test - Missing Argument
+    >>> text = "Why is Twice named Twice? The group will touch people's hearts twice: once through the ears, and once again through the eyes. Also Mina is number 1"
+    >>> text_indentation(text)
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
