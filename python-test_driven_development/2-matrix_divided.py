@@ -11,7 +11,7 @@ def matrix_divided(matrix, div):
     matrix_divided: Takes a square matrix
     and divides each element by a specific divisor
 
-    Args: 
+    Args:
     matrix: A matrix that is being divided
     div: An integer or a float that is used to divide the matrix elements
 
