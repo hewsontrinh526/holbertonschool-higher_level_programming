@@ -18,8 +18,8 @@ def matrix_divided(matrix, div):
     Returns:
     A new matrix with all elements divided
     """
-    err_msg_1 = "matrix must be a matrix (list of lists) of integers/float"
-    err_msg_2 = "each row of the matrix must be the same size"
+    err_msg_1 = "matrix must be a matrix (list of lists) of integers/floats"
+    err_msg_2 = "Each row of the matrix must have the same size"
     err_msg_3 = "div must be a number"
     err_msg_4 = "division by zero"
     row_size = len(matrix[0])
