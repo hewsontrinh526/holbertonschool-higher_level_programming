@@ -1,0 +1,62 @@
+The ``add_integer`` module
+==========================
+
+Using ``add_integer``
+---------------------
+
+First import ``add_integer`` from the ``0-add_integer`` file:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Tests:
+
+    Test - Regular Addition
+    >>> add_integer(36, 64)
+    100
+
+    Test - Regular Addition with floats
+    >>> add_integer(3.4, 7.2)
+    10
+
+    Test - Regular Addition with an integer and a float
+    >>> add_integer(1.2, 9)
+    10
+
+    Test - a is not an integer
+    >>> add_integer("Mina", 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    Test - b is not an integer
+    >>> add_integer(2, "Mina")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    Test - Addition result is infinity where a is infinity
+    >>> add_integer(float("inf"), 2)
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+    Test - Addition result is infinity where b is infinity
+    >>> add_integer(2, float("inf"))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+    Test - Addition with float NaN
+    >>> add_integer(float('NaN'), 2)
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
+    Test - Missing both args
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    Test - Missing b argument
+    >>> add_integer(2, )
+    100
