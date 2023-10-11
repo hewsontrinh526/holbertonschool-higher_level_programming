@@ -10,13 +10,26 @@ First import ``text_indentation`` from the ``5-text_indentation`` file:
 Tests:
 
     Test - Regular Text
-    >>> text = "Mina is number 1"
+    >>> text = "Why is Twice named Twice? The group will touch people's hearts twice: once through the ears, and once again through the eyes. Also Mina is number 1!"
     >>> text_indentation(text)
-    Mina is number 1
+    Why is Twice named Twice?
+    <BLANKLINE>
+    The group will touch people's hearts twice:
+    <BLANKLINE>
+    once through the ears, and once again through the eyes.
+    <BLANKLINE>
+    Also Mina is number 1!
 
     Test - Missing Argument
-    >>> text = "Why is Twice named Twice? The group will touch people's hearts twice: once through the ears, and once again through the eyes. Also Mina is number 1"
+    >>> text = "Why is Twice named Twice? The group will touch people's hearts twice: once through the ears, and once again through the eyes. Also Mina is number 1!"
     >>> text_indentation()
     Traceback (most recent call last):
     ...
     TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    Test - Text is not a string
+    >>> text = 2
+    >>> text_indentation(text)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
