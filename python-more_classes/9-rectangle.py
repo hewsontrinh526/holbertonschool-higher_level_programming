@@ -52,9 +52,9 @@ class Rectangle:
         width (int): Width of the rectangle
         height (int): Height of the rectangle
         """
-        Rectangle.number_of_instances = Rectangle.number_of_instances + 1
-        self.height = height
         self.width = width
+        self.height = height
+        Rectangle.number_of_instances = Rectangle.number_of_instances + 1
 
     @property
     def width(self):
@@ -96,7 +96,7 @@ class Rectangle:
         """
         Finds the area of the rectangle
         """
-        return self.__width * self.__height
+        return self.width * self.height
 
     def perimeter(self):
         """
@@ -104,15 +104,15 @@ class Rectangle:
         """
         if self.__height == 0 or self.__width == 0:
             return 0
-        return (2 * self.__height) + (2 * self.__width)
+        return (self.height + self.width) * 2
 
     def __str__(self):
         """
         Prints a rectangle
         """
-        rectangle = ""
         if self.__height == 0 or self.__width == 0:
-            return rectangle
+            return ""
+        rectangle = ""
         for i in range(self.__height):
             for j in range(self.__width):
                 rectangle = rectangle + str(self.print_symbol)
@@ -125,14 +125,15 @@ class Rectangle:
         Returns a string representation of the rectangle
         object that can be used to create a normal rectangle
         """
-        return ("Rectangle({:d}, {:d})".format(self.__width, self.__height))
+        class_name = type(self).__name__
+        return f"{class_name}({self.width}, {self.height})"
 
     def __del__(self):
         """
         Deletes the rectangle instance
         """
+        print(f"Bye rectangle...")
         Rectangle.number_of_instances = Rectangle.number_of_instances - 1
-        print("Bye rectangle...")
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
