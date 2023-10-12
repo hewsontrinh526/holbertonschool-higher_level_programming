@@ -156,4 +156,4 @@ class Rectangle:
         """
         Prints a square using the Rectangle class
         """
-        return cls(size, size)
+        return cls(int(size), int(size))
