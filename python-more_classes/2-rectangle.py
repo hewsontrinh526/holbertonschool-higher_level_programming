@@ -13,6 +13,8 @@ Function:
         height(self): Retrieves the height
         height(self, value): Determines whether
             the value is suitable for the height
+        area(self): Finds the area of the rectangle
+        perimeter(self): Finds the perimeter of the rectangle
 """
 
 
