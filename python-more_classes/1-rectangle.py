@@ -4,22 +4,33 @@ Module: 1-rectangle
 
 A class that defines a rectangle
 
-Function: 
+Function:
+        __init__(self, width=0, height=0): Initialises a new
+            instance of a rectangle
+        width(self): Retrieves the width
+        width(self, value): Determines whether the value
+            is suitable for the width
+        height(self): Retrieves the height
+        height(self, value): Determines whether
+            the value is suitable for the height
 """
 
 
 class Rectangle:
     """
-    Attributes: 
+    Attributes:
         width (int): Width of the rectangle
         height (int): Height of the rectangle
 
     Methods:
-        __init__(self, width=0, height=0): Initialises a new instance of a rectangle
+        __init__(self, width=0, height=0): Initialises a new
+        instance of a rectangle
         width(self): Retrieves the width
-        width(self, value): Determines whether the value is suitable for the width
+        width(self, value): Determines whether the
+        value is suitable for the width
         height(self): Retrieves the height
-        height(self, value): Determines whether the value is suitable for the height
+        height(self, value): Determines whether the
+        value is suitable for the height
     """
     def __init__(self, width=0, height=0):
         """
@@ -38,7 +49,7 @@ class Rectangle:
         Retrieves itself
         """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """
@@ -56,7 +67,7 @@ class Rectangle:
         Retrieves itself
         """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """
