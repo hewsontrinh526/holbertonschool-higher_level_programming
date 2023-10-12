@@ -153,4 +153,15 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        """
+        Prints a square-shaped reactangle using the Rectangle class
+        with equal height and width
+
+        Args:
+            clas: the class
+            size (int): The size of the square, i.e. side length
+
+        Returns:
+            Rectangle: A square-shaped rectangle
+        """
         return cls(size, size)
