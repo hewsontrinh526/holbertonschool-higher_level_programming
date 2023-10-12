@@ -41,7 +41,7 @@ class Rectangle:
             and determines whether one is bigger than the other
             or if they have equal area
 
-        square(cls, size): Returns a square using the Rectangle class
+        square(cls, size): Returns a square using the Rectangle class module
     """
     number_of_instances = 0
     print_symbol = "#"
