@@ -96,27 +96,27 @@ class Rectangle:
         """
         Finds the area of the rectangle
         """
-        return self.__width * self.__height
+        return self.width * self.height
 
     def perimeter(self):
         """
         Finds the perimeter of the rectangle
         """
-        if self.__height == 0 or self.__width == 0:
+        if self.height == 0 or self.width == 0:
             return 0
-        return (2 * self.__height) + (2 * self.__width)
+        return (2 * self.height) + (2 * self.width)
 
     def __str__(self):
         """
         Prints a rectangle
         """
         rectangle = ""
-        if self.__height == 0 or self.__width == 0:
+        if self.height == 0 or self.width == 0:
             return rectangle
-        for i in range(self.__height):
-            for j in range(self.__width):
+        for i in range(self.height):
+            for j in range(self.width):
                 rectangle = rectangle + str(self.print_symbol)
-            if i != self.__height - 1:
+            if i != self.height - 1:
                 rectangle = rectangle + "\n"
         return rectangle
 
@@ -125,7 +125,7 @@ class Rectangle:
         Returns a string representation of the rectangle
         object that can be used to create a normal rectangle
         """
-        return ("Rectangle({:d}, {:d})".format(self.__width, self.__height))
+        return ("Rectangle({:d}, {:d})".format(self.width, self.height))
 
     def __del__(self):
         """
@@ -162,4 +162,4 @@ class Rectangle:
         Returns:
             Rectangle: A square-shaped rectangle
         """
-        return cls(int(size), int(size))
+        return cls(size, size)
