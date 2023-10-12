@@ -162,4 +162,4 @@ class Rectangle:
         Returns:
             Rectangle: A square-shaped rectangle
         """
-        return cls(size, size)
+        return cls(int(size), int(size))
