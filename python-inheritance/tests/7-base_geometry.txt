@@ -68,3 +68,9 @@ Tests:
     Traceback (most recent call last):
     ...
     TypeError: Mina must be an integer
+
+    Test: Get Area
+    >>> bg.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
