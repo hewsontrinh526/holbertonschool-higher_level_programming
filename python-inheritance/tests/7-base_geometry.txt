@@ -69,6 +69,10 @@ Tests:
     ...
     TypeError: Mina must be an integer
 
+    Test: Value is True
+    >>> bg.integer_validator("Mina", True)
+
+
     Test: Get Area
     >>> bg.area()
     Traceback (most recent call last):
