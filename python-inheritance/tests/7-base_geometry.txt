@@ -64,10 +64,10 @@ Tests:
     TypeError: Mina must be an integer
 
     Test: Value is None
-    >>> bg.integer_validator("Mina", None)
+    >>> bg.integer_validator("age", None)
     Traceback (most recent call last):
     ...
-    TypeError: Mina must be an integer
+    TypeError: age must be an integer
 
     Test: Value is True
     >>> bg.integer_validator("Mina", True)
