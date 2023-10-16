@@ -9,6 +9,9 @@ First import ``MyList`` from the ``1-my_list`` file:
 
 Tests:
 
+    Test - Making an instance of MyList:
+    >>> my_list = MyList()
+
     Test - Regular Sort
     >>> my_list = MyList()
     >>> my_list.append(1)
