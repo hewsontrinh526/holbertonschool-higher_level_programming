@@ -1,0 +1,35 @@
+The ``base_geometry`` module
+==========================
+
+Using ``BaseGeometry``
+---------------------
+
+First import ``BaseGeometry`` from the ``7-base_geometry`` file:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Tests:
+
+    Test: Making an instance of BaseGeometry
+    >>> bg = BaseGeometry()
+
+    Test: Normal Test case, no error
+    >>> bg.integer_validator("Mina", 2)
+
+    Test: Value is a negative number
+    >>> bg.integer_validator("Mina", -2)
+    Traceback (most recent call last):
+    ...
+    ValueError: Mina must be greater than 0
+
+    Test: Value is zero
+    >>> bg.integer_validator("Mina", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: Mina must be greater than 0
+
+    Test: Value is not an integer
+    >>> bg.integer_validator("Mina", "Twice")
+    Traceback (most recent call last):
+    ...
+    TypeError: Mina must be an integer
+
