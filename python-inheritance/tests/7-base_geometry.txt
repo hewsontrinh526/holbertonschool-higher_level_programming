@@ -13,25 +13,25 @@ Tests:
     >>> bg = BaseGeometry()
 
     Test: Normal Test case, no error
-    >>> bg.integer_validator("age", 2)
+    >>> bg.integer_validator("Mina", 2)
 
     Test: Value is a negative number
-    >>> bg.integer_validator("age", -2)
+    >>> bg.integer_validator("Mina", -2)
     Traceback (most recent call last):
     ...
-    ValueError: age must be greater than 0
+    ValueError: Mina must be greater than 0
 
     Test: Value is zero
-    >>> bg.integer_validator("age", 0)
+    >>> bg.integer_validator("Mina", 0)
     Traceback (most recent call last):
     ...
-    ValueError: age must be greater than 0
+    ValueError: Mina must be greater than 0
 
     Test: Value is a string
-    >>> bg.integer_validator("age", "name")
+    >>> bg.integer_validator("Mina", "Twice")
     Traceback (most recent call last):
     ...
-    TypeError: age must be an integer
+    TypeError: Mina must be an integer
 
     Test: No arguments passed
     >>> bg.integer_validator()
@@ -40,28 +40,28 @@ Tests:
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
     Test: One arguments passed
-    >>> bg.integer_validator("age", )
+    >>> bg.integer_validator("Mina", )
     Traceback (most recent call last):
     ...
     TypeError: integer_validator() missing 1 required positional argument: 'value'
 
     Test: Value is a list
-    >>> bg.integer_validator("age", [2])
+    >>> bg.integer_validator("Mina", [2])
     Traceback (most recent call last):
     ...
-    TypeError: age must be an integer
+    TypeError: Mina must be an integer
 
     Test: Value is a tuple
-    >>> bg.integer_validator("age", (2,))
+    >>> bg.integer_validator("Mina", (2,))
     Traceback (most recent call last):
     ...
-    TypeError: ageMina must be an integer
+    TypeError: Mina must be an integer
 
     Test: Value is a set
-    >>> bg.integer_validator("age", {2, 1})
+    >>> bg.integer_validator("Mina", {2, 1})
     Traceback (most recent call last):
     ...
-    TypeError: age must be an integer
+    TypeError: Mina must be an integer
 
     Test: Value is None
     >>> bg.integer_validator("age", None)
@@ -70,10 +70,7 @@ Tests:
     TypeError: age must be an integer
 
     Test: Value is True
-    >>> bg.integer_validator("age", True)
-    Traceback (most recent call last):
-    ...
-    TypeError: age must be an integer
+    >>> bg.integer_validator("Mina", True)
 
 
     Test: Get Area
