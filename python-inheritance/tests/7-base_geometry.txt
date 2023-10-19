@@ -70,8 +70,10 @@ Tests:
     TypeError: age must be an integer
 
     Test: Value is True
-    >>> bg.integer_validator("Mina", True)
-
+    >>> bg.integer_validator("age", True)
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
 
     Test: Get Area
     >>> bg.area()
