@@ -2,7 +2,6 @@
 """
 Module: 8-class_to_json
 """
-import json
 
 
 def class_to_json(obj):
@@ -11,4 +10,4 @@ def class_to_json(obj):
     structure (list, dictionary, string, integer and boolean) for JSON
     serialisation of an object.
     """
-    return vars(obj)
+    return obj.__dict__
