@@ -11,4 +11,4 @@ def class_to_json(obj):
     structure (list, dictionary, string, integer and boolean) for JSON
     serialisation of an object.
     """
-    return obj.__dict__
+    return vars(obj)
