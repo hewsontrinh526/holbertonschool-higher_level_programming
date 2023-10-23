@@ -7,7 +7,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """
-    Rectangle that inherits from class Base
+    Rectangle that inherits from Base
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
@@ -28,6 +28,10 @@ class Rectangle(Base):
         """
         Determines whether the value is suitable for width
         """
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -42,6 +46,10 @@ class Rectangle(Base):
         """
         Determines whether the value is suitable for height
         """
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
@@ -56,6 +64,10 @@ class Rectangle(Base):
         """
         Determines whether the value is suitable for x
         """
+        if type(value) is not int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -70,4 +82,8 @@ class Rectangle(Base):
         """
         Determines whether the value is suitable for y
         """
+        if type(value) is not int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
