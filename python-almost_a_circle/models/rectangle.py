@@ -54,7 +54,7 @@ class Rectangle(Base):
         """
         return self.__x
 
-    @width.setter
+    @x.setter
     def x(self, value):
         """
         Determines whether the value is suitable for x
@@ -68,7 +68,7 @@ class Rectangle(Base):
         """
         return self.__y
 
-    @width.setter
+    @y.setter
     def y(self, value):
         """
         Determines whether the value is suitable for y
