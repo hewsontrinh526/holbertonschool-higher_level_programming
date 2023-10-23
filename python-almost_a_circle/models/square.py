@@ -18,7 +18,7 @@ class Square(Rectangle):
         Size assignment that inherits from Rectangle
         """
         return self.width
-    
+
     @size.setter
     def size(self, value):
         """
