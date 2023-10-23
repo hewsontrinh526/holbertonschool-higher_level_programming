@@ -101,5 +101,5 @@ class Rectangle(Base):
         """
         Prints a rectangle of '#' in stdout 
         """
-        for i in range(self.height):
+        for _ in range(self.height):
             print("#" * self.width)
