@@ -68,3 +68,11 @@ class TestRectangle(unittest.TestCase):
         rectangle_1.display()
         sys.stdout = sys.__stdout__
         self.assertEqual(captured_output.getvalue(), display_1)
+
+    def test_rectangle_str_representation(self):
+        """
+        Test for correct string representation
+        """
+        rectangle_1 = Rectangle(1, 2, 3, 4, 99)
+        output_1 = "[Rectangle] (99) 3/4 - 1/2"
+        self.assertEqual(str(rectangle_1), output_1)
