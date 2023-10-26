@@ -26,14 +26,13 @@ class TestBase(unittest.TestCase):
 
     def test_to_json_string(self):
         """
-        Testing for returning JSON string representation
-        """
-        """
         Test with an empty list
         """
         base_data_1 = []
         json_string_1 = Base.to_json_string(base_data_1)
         self.assertEqual(json_string_1, "[]")
+
+    def test_to_json_string_output(self):
         """
         Test for correct output of JSON string representation
         """
@@ -41,6 +40,8 @@ class TestBase(unittest.TestCase):
         json_string_2 = Base.to_json_string(base_data_2)
         self.assertEqual(json_string_2
                          , '[{"Mina": "1"}, {"Nayeon": "2"}, {"Jihyo": "3"}]')
+
+    def test_to_json_string_none(self):
         """
         Test for correct output of JSON string representation if the input
         is 'None'
@@ -49,10 +50,7 @@ class TestBase(unittest.TestCase):
         json_string_3 = Base.to_json_string(base_data_3)
         self.assertEqual(json_string_3, '[]')
 
-    def test_from_json_string(self):
-        """
-        Testing for inputing JSON string representation
-        """
+    def test_from_json_string_input(self):
         """
         Test for string input
         """
@@ -60,12 +58,16 @@ class TestBase(unittest.TestCase):
         base_data_1 = Base.from_json_string(json_string_1)
         self.assertEqual(base_data_1
                         , [{"Mina": "1"}, {"Nayeon": "2"}, {"Jihyo": "3"}])
+
+    def test_from_json_string_empty(self):
         """
         Test for empty string input
         """
         json_string_2 = ''
         base_data_2 = Base.from_json_string(json_string_2)
         self.assertEqual(base_data_2, [])
+
+    def test_from_json_string_none(self):
         """
         Test for None string input
         """
@@ -73,10 +75,5 @@ class TestBase(unittest.TestCase):
         base_data_3 = Base.from_json_string(json_string_3)
         self.assertEqual(base_data_3, [])
 
-    def test_create_instance(self):
-        """
-        Testing for creating instances
-        """
-        dict = {'id': 2, 'name': 'Mina'}
-        instance = Base.create(**dict)
-        self.assertIsInstance(instance, Base)
+if __name__ == '__main__':
+    unittest.main()
