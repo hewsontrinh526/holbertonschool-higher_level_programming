@@ -16,6 +16,7 @@ class TestBase(unittest.TestCase):
         Testing for missing arguments
         """
         base_1 = Base()
+        self.assertEqual(base_1.id, 1)
         base_1_compare = base_1.id > 0
         self.assertEqual(base_1_compare, True)
         base_2 = Base()
@@ -76,3 +77,6 @@ class TestBase(unittest.TestCase):
         """
         Testing for creating instances
         """
+        dict = {'id': 2, 'name': 'Mina'}
+        instance = Base.create(**dict)
+        self.assertIsInstance(instance, Base)
