@@ -4,10 +4,10 @@ Unittest for Rectangle module
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
-from io import StringIO
 import io
 import sys
 import os
+
 
 class TestRectangle(unittest.TestCase):
     """
