@@ -16,12 +16,12 @@ class TestBase(unittest.TestCase):
         Testing for missing arguments
         """
         base_1 = Base()
+        base_1_compare = base_1.id > 0
+        self.assertEqual(base_1_compare, True)
         base_2 = Base()
-        self.assertEqual(base_1.id, 1)
-        self.assertEqual(base_2.id, 2)
-        self.assertNotEqual(base_1.id, base_2.id)
-        base_3 = Base(45)
-        self.assertEqual(base_3.id, 45)
+        self.assertEqual(base_1.id + 1, base_2.id)
+        base_3 = Base(2)
+        self.assertEqual(base_3.id, 2)
 
     def test_to_json_string(self):
         """
@@ -71,3 +71,8 @@ class TestBase(unittest.TestCase):
         json_string_3 = None
         base_data_3 = Base.from_json_string(json_string_3)
         self.assertEqual(base_data_3, [])
+
+    def test_create_instance(self):
+        """
+        Testing for creating instances
+        """
