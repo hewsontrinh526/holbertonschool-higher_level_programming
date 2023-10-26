@@ -7,6 +7,7 @@ import io
 import sys
 import os
 
+
 class TestBase(unittest.TestCase):
     """
     Tests for Base Class
