@@ -135,3 +135,11 @@ class TestRectangle(unittest.TestCase):
         rectangle_1 = Rectangle(1, 2, 3, 4, 99)
         output_1 = "[Rectangle] (99) 3/4 - 1/2"
         self.assertEqual(str(rectangle_1), output_1)
+
+    def test_rectangle_update(self):
+        """
+        Test for correct update arguments
+        """
+        rectangle_1 = Rectangle(1, 2, 3, 4, 5)
+        rectangle_1.update(6)
+        self.assertEqual(rectangle_1.id, 6)
