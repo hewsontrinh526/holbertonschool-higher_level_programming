@@ -12,7 +12,7 @@ if __name__ == "__main__":
     cursor = database.cursor()
     search_term = sys.argv[4]
     cursor.execute("SELECT * FROM states WHERE BINARY \
-                   name LIKE %s ORDER BY id;", (search_term, ))
+                   name LIKE {} ORDER BY id;".format(search_term))
     rows = cursor.fetchall()
     for row in rows:
         print(row)
