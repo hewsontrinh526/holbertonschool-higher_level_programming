@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Scripts that lists all State objects from the database hbtn_0e_6_usa
+Scripts that lists the first State objects from the database hbtn_0e_6_usa
 """
 import MySQLdb
 import sys
@@ -15,5 +15,7 @@ if __name__ == "__main__":
     rows = cursor.fetchone()
     if rows:
         print("{}: {}".format(rows[0], rows[1]))
+    else:
+        print("Nothing")
     cursor.close()
     database.close()
