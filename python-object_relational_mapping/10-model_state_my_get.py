@@ -13,8 +13,8 @@ if __name__ == "__main__":
                                passwd=sys.argv[2], db=sys.argv[3])
     cursor = database.cursor()
     search_term = sys.argv[4]
-    cursor.execute("SELECT id FROM states WHERE name LIKE %s ORDER BY id;"
-                   ,(search_term,))
+    cursor.execute("SELECT id FROM states WHERE name LIKE %s ORDER BY id;",
+                   (search_term,))
     rows = cursor.fetchall()
     if not rows:
         print("Not found")
