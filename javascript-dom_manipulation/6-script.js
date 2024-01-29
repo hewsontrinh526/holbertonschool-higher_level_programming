@@ -7,3 +7,5 @@ async function fetchName() {
     console.log(data.name);
     character.textContent = data.name;
 }
+
+fetchName();
